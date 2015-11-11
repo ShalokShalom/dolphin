@@ -127,7 +127,6 @@ unsigned int CMixer::Mix(short* samples, unsigned int num_samples, bool consider
 		return num_samples;
 	}
 
-	m_dma_mixer.Mix(samples, num_samples, consider_framelimit);
 	m_streaming_mixer.Mix(samples, num_samples, consider_framelimit);
 	m_wiimote_speaker_mixer.Mix(samples, num_samples, consider_framelimit);
 	return num_samples;
